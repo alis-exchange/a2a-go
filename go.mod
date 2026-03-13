@@ -1,4 +1,4 @@
-module github.com/alis-exchange/a2a-go
+module go.alis.build/a2a
 go 1.24
 
 require (
