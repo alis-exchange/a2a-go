@@ -3,7 +3,7 @@
 // Source: lf/a2a/v1/a2a.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-03-19 10:53:15 UTC
+// Generated on: 2026-03-19 11:21:41 UTC
 
 package v1
 
