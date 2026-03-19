@@ -162,6 +162,50 @@ func (Role) EnumDescriptor() ([]byte, []int) {
 	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{1}
 }
 
+type MyTemporaryTestMessage struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Test          string                 `protobuf:"bytes,1,opt,name=test,proto3" json:"test,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *MyTemporaryTestMessage) Reset() {
+	*x = MyTemporaryTestMessage{}
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[0]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *MyTemporaryTestMessage) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MyTemporaryTestMessage) ProtoMessage() {}
+
+func (x *MyTemporaryTestMessage) ProtoReflect() protoreflect.Message {
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[0]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MyTemporaryTestMessage.ProtoReflect.Descriptor instead.
+func (*MyTemporaryTestMessage) Descriptor() ([]byte, []int) {
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *MyTemporaryTestMessage) GetTest() string {
+	if x != nil {
+		return x.Test
+	}
+	return ""
+}
+
 // Configuration of a send message request.
 type SendMessageConfiguration struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
@@ -188,7 +232,7 @@ type SendMessageConfiguration struct {
 
 func (x *SendMessageConfiguration) Reset() {
 	*x = SendMessageConfiguration{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[0]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -200,7 +244,7 @@ func (x *SendMessageConfiguration) String() string {
 func (*SendMessageConfiguration) ProtoMessage() {}
 
 func (x *SendMessageConfiguration) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[0]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -213,7 +257,7 @@ func (x *SendMessageConfiguration) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMessageConfiguration.ProtoReflect.Descriptor instead.
 func (*SendMessageConfiguration) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{0}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *SendMessageConfiguration) GetAcceptedOutputModes() []string {
@@ -272,7 +316,7 @@ type Task struct {
 
 func (x *Task) Reset() {
 	*x = Task{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[1]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -284,7 +328,7 @@ func (x *Task) String() string {
 func (*Task) ProtoMessage() {}
 
 func (x *Task) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[1]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -297,7 +341,7 @@ func (x *Task) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Task.ProtoReflect.Descriptor instead.
 func (*Task) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{1}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Task) GetId() string {
@@ -358,7 +402,7 @@ type TaskStatus struct {
 
 func (x *TaskStatus) Reset() {
 	*x = TaskStatus{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[2]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -370,7 +414,7 @@ func (x *TaskStatus) String() string {
 func (*TaskStatus) ProtoMessage() {}
 
 func (x *TaskStatus) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[2]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -383,7 +427,7 @@ func (x *TaskStatus) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TaskStatus.ProtoReflect.Descriptor instead.
 func (*TaskStatus) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{2}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *TaskStatus) GetState() TaskState {
@@ -433,7 +477,7 @@ type Part struct {
 
 func (x *Part) Reset() {
 	*x = Part{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[3]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -445,7 +489,7 @@ func (x *Part) String() string {
 func (*Part) ProtoMessage() {}
 
 func (x *Part) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[3]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -458,7 +502,7 @@ func (x *Part) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Part.ProtoReflect.Descriptor instead.
 func (*Part) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{3}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *Part) GetContent() isPart_Content {
@@ -593,7 +637,7 @@ type Message struct {
 
 func (x *Message) Reset() {
 	*x = Message{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[4]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -605,7 +649,7 @@ func (x *Message) String() string {
 func (*Message) ProtoMessage() {}
 
 func (x *Message) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[4]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -618,7 +662,7 @@ func (x *Message) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Message.ProtoReflect.Descriptor instead.
 func (*Message) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{4}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *Message) GetMessageId() string {
@@ -699,7 +743,7 @@ type Artifact struct {
 
 func (x *Artifact) Reset() {
 	*x = Artifact{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[5]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -711,7 +755,7 @@ func (x *Artifact) String() string {
 func (*Artifact) ProtoMessage() {}
 
 func (x *Artifact) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[5]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -724,7 +768,7 @@ func (x *Artifact) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Artifact.ProtoReflect.Descriptor instead.
 func (*Artifact) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{5}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *Artifact) GetArtifactId() string {
@@ -787,7 +831,7 @@ type TaskStatusUpdateEvent struct {
 
 func (x *TaskStatusUpdateEvent) Reset() {
 	*x = TaskStatusUpdateEvent{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[6]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -799,7 +843,7 @@ func (x *TaskStatusUpdateEvent) String() string {
 func (*TaskStatusUpdateEvent) ProtoMessage() {}
 
 func (x *TaskStatusUpdateEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[6]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -812,7 +856,7 @@ func (x *TaskStatusUpdateEvent) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TaskStatusUpdateEvent.ProtoReflect.Descriptor instead.
 func (*TaskStatusUpdateEvent) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{6}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *TaskStatusUpdateEvent) GetTaskId() string {
@@ -865,7 +909,7 @@ type TaskArtifactUpdateEvent struct {
 
 func (x *TaskArtifactUpdateEvent) Reset() {
 	*x = TaskArtifactUpdateEvent{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[7]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -877,7 +921,7 @@ func (x *TaskArtifactUpdateEvent) String() string {
 func (*TaskArtifactUpdateEvent) ProtoMessage() {}
 
 func (x *TaskArtifactUpdateEvent) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[7]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -890,7 +934,7 @@ func (x *TaskArtifactUpdateEvent) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TaskArtifactUpdateEvent.ProtoReflect.Descriptor instead.
 func (*TaskArtifactUpdateEvent) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{7}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *TaskArtifactUpdateEvent) GetTaskId() string {
@@ -952,7 +996,7 @@ type AuthenticationInfo struct {
 
 func (x *AuthenticationInfo) Reset() {
 	*x = AuthenticationInfo{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[8]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -964,7 +1008,7 @@ func (x *AuthenticationInfo) String() string {
 func (*AuthenticationInfo) ProtoMessage() {}
 
 func (x *AuthenticationInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[8]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -977,7 +1021,7 @@ func (x *AuthenticationInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AuthenticationInfo.ProtoReflect.Descriptor instead.
 func (*AuthenticationInfo) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{8}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *AuthenticationInfo) GetScheme() string {
@@ -1019,7 +1063,7 @@ type AgentInterface struct {
 
 func (x *AgentInterface) Reset() {
 	*x = AgentInterface{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[9]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1031,7 +1075,7 @@ func (x *AgentInterface) String() string {
 func (*AgentInterface) ProtoMessage() {}
 
 func (x *AgentInterface) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[9]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1044,7 +1088,7 @@ func (x *AgentInterface) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentInterface.ProtoReflect.Descriptor instead.
 func (*AgentInterface) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{9}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *AgentInterface) GetUrl() string {
@@ -1123,7 +1167,7 @@ type AgentCard struct {
 
 func (x *AgentCard) Reset() {
 	*x = AgentCard{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[10]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1135,7 +1179,7 @@ func (x *AgentCard) String() string {
 func (*AgentCard) ProtoMessage() {}
 
 func (x *AgentCard) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[10]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1148,7 +1192,7 @@ func (x *AgentCard) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentCard.ProtoReflect.Descriptor instead.
 func (*AgentCard) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{10}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *AgentCard) GetName() string {
@@ -1264,7 +1308,7 @@ type AgentProvider struct {
 
 func (x *AgentProvider) Reset() {
 	*x = AgentProvider{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[11]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1276,7 +1320,7 @@ func (x *AgentProvider) String() string {
 func (*AgentProvider) ProtoMessage() {}
 
 func (x *AgentProvider) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[11]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1289,7 +1333,7 @@ func (x *AgentProvider) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentProvider.ProtoReflect.Descriptor instead.
 func (*AgentProvider) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{11}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *AgentProvider) GetUrl() string {
@@ -1325,7 +1369,7 @@ type AgentCapabilities struct {
 
 func (x *AgentCapabilities) Reset() {
 	*x = AgentCapabilities{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[12]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1337,7 +1381,7 @@ func (x *AgentCapabilities) String() string {
 func (*AgentCapabilities) ProtoMessage() {}
 
 func (x *AgentCapabilities) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[12]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1350,7 +1394,7 @@ func (x *AgentCapabilities) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentCapabilities.ProtoReflect.Descriptor instead.
 func (*AgentCapabilities) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{12}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *AgentCapabilities) GetStreaming() bool {
@@ -1399,7 +1443,7 @@ type AgentExtension struct {
 
 func (x *AgentExtension) Reset() {
 	*x = AgentExtension{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[13]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1411,7 +1455,7 @@ func (x *AgentExtension) String() string {
 func (*AgentExtension) ProtoMessage() {}
 
 func (x *AgentExtension) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[13]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1424,7 +1468,7 @@ func (x *AgentExtension) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentExtension.ProtoReflect.Descriptor instead.
 func (*AgentExtension) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{13}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *AgentExtension) GetUri() string {
@@ -1482,7 +1526,7 @@ type AgentSkill struct {
 
 func (x *AgentSkill) Reset() {
 	*x = AgentSkill{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[14]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1494,7 +1538,7 @@ func (x *AgentSkill) String() string {
 func (*AgentSkill) ProtoMessage() {}
 
 func (x *AgentSkill) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[14]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1507,7 +1551,7 @@ func (x *AgentSkill) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentSkill.ProtoReflect.Descriptor instead.
 func (*AgentSkill) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{14}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *AgentSkill) GetId() string {
@@ -1587,7 +1631,7 @@ type AgentCardSignature struct {
 
 func (x *AgentCardSignature) Reset() {
 	*x = AgentCardSignature{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[15]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1599,7 +1643,7 @@ func (x *AgentCardSignature) String() string {
 func (*AgentCardSignature) ProtoMessage() {}
 
 func (x *AgentCardSignature) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[15]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1612,7 +1656,7 @@ func (x *AgentCardSignature) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AgentCardSignature.ProtoReflect.Descriptor instead.
 func (*AgentCardSignature) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{15}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *AgentCardSignature) GetProtected() string {
@@ -1659,7 +1703,7 @@ type TaskPushNotificationConfig struct {
 
 func (x *TaskPushNotificationConfig) Reset() {
 	*x = TaskPushNotificationConfig{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[16]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1671,7 +1715,7 @@ func (x *TaskPushNotificationConfig) String() string {
 func (*TaskPushNotificationConfig) ProtoMessage() {}
 
 func (x *TaskPushNotificationConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[16]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1684,7 +1728,7 @@ func (x *TaskPushNotificationConfig) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TaskPushNotificationConfig.ProtoReflect.Descriptor instead.
 func (*TaskPushNotificationConfig) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{16}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *TaskPushNotificationConfig) GetTenant() string {
@@ -1741,7 +1785,7 @@ type StringList struct {
 
 func (x *StringList) Reset() {
 	*x = StringList{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[17]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1753,7 +1797,7 @@ func (x *StringList) String() string {
 func (*StringList) ProtoMessage() {}
 
 func (x *StringList) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[17]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1766,7 +1810,7 @@ func (x *StringList) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StringList.ProtoReflect.Descriptor instead.
 func (*StringList) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{17}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *StringList) GetList() []string {
@@ -1787,7 +1831,7 @@ type SecurityRequirement struct {
 
 func (x *SecurityRequirement) Reset() {
 	*x = SecurityRequirement{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[18]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1799,7 +1843,7 @@ func (x *SecurityRequirement) String() string {
 func (*SecurityRequirement) ProtoMessage() {}
 
 func (x *SecurityRequirement) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[18]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1812,7 +1856,7 @@ func (x *SecurityRequirement) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SecurityRequirement.ProtoReflect.Descriptor instead.
 func (*SecurityRequirement) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{18}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *SecurityRequirement) GetSchemes() map[string]*StringList {
@@ -1841,7 +1885,7 @@ type SecurityScheme struct {
 
 func (x *SecurityScheme) Reset() {
 	*x = SecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[19]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1853,7 +1897,7 @@ func (x *SecurityScheme) String() string {
 func (*SecurityScheme) ProtoMessage() {}
 
 func (x *SecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[19]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1866,7 +1910,7 @@ func (x *SecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SecurityScheme.ProtoReflect.Descriptor instead.
 func (*SecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{19}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *SecurityScheme) GetScheme() isSecurityScheme_Scheme {
@@ -1976,7 +2020,7 @@ type APIKeySecurityScheme struct {
 
 func (x *APIKeySecurityScheme) Reset() {
 	*x = APIKeySecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[20]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1988,7 +2032,7 @@ func (x *APIKeySecurityScheme) String() string {
 func (*APIKeySecurityScheme) ProtoMessage() {}
 
 func (x *APIKeySecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[20]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2001,7 +2045,7 @@ func (x *APIKeySecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use APIKeySecurityScheme.ProtoReflect.Descriptor instead.
 func (*APIKeySecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{20}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *APIKeySecurityScheme) GetDescription() string {
@@ -2043,7 +2087,7 @@ type HTTPAuthSecurityScheme struct {
 
 func (x *HTTPAuthSecurityScheme) Reset() {
 	*x = HTTPAuthSecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[21]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2055,7 +2099,7 @@ func (x *HTTPAuthSecurityScheme) String() string {
 func (*HTTPAuthSecurityScheme) ProtoMessage() {}
 
 func (x *HTTPAuthSecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[21]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2068,7 +2112,7 @@ func (x *HTTPAuthSecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPAuthSecurityScheme.ProtoReflect.Descriptor instead.
 func (*HTTPAuthSecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{21}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *HTTPAuthSecurityScheme) GetDescription() string {
@@ -2109,7 +2153,7 @@ type OAuth2SecurityScheme struct {
 
 func (x *OAuth2SecurityScheme) Reset() {
 	*x = OAuth2SecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[22]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2121,7 +2165,7 @@ func (x *OAuth2SecurityScheme) String() string {
 func (*OAuth2SecurityScheme) ProtoMessage() {}
 
 func (x *OAuth2SecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[22]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2134,7 +2178,7 @@ func (x *OAuth2SecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OAuth2SecurityScheme.ProtoReflect.Descriptor instead.
 func (*OAuth2SecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{22}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *OAuth2SecurityScheme) GetDescription() string {
@@ -2173,7 +2217,7 @@ type OpenIdConnectSecurityScheme struct {
 
 func (x *OpenIdConnectSecurityScheme) Reset() {
 	*x = OpenIdConnectSecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[23]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2185,7 +2229,7 @@ func (x *OpenIdConnectSecurityScheme) String() string {
 func (*OpenIdConnectSecurityScheme) ProtoMessage() {}
 
 func (x *OpenIdConnectSecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[23]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2198,7 +2242,7 @@ func (x *OpenIdConnectSecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OpenIdConnectSecurityScheme.ProtoReflect.Descriptor instead.
 func (*OpenIdConnectSecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{23}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *OpenIdConnectSecurityScheme) GetDescription() string {
@@ -2226,7 +2270,7 @@ type MutualTlsSecurityScheme struct {
 
 func (x *MutualTlsSecurityScheme) Reset() {
 	*x = MutualTlsSecurityScheme{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[24]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2238,7 +2282,7 @@ func (x *MutualTlsSecurityScheme) String() string {
 func (*MutualTlsSecurityScheme) ProtoMessage() {}
 
 func (x *MutualTlsSecurityScheme) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[24]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2251,7 +2295,7 @@ func (x *MutualTlsSecurityScheme) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MutualTlsSecurityScheme.ProtoReflect.Descriptor instead.
 func (*MutualTlsSecurityScheme) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{24}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *MutualTlsSecurityScheme) GetDescription() string {
@@ -2278,7 +2322,7 @@ type OAuthFlows struct {
 
 func (x *OAuthFlows) Reset() {
 	*x = OAuthFlows{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[25]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2290,7 +2334,7 @@ func (x *OAuthFlows) String() string {
 func (*OAuthFlows) ProtoMessage() {}
 
 func (x *OAuthFlows) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[25]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2303,7 +2347,7 @@ func (x *OAuthFlows) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OAuthFlows.ProtoReflect.Descriptor instead.
 func (*OAuthFlows) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{25}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *OAuthFlows) GetFlow() isOAuthFlows_Flow {
@@ -2424,7 +2468,7 @@ type AuthorizationCodeOAuthFlow struct {
 
 func (x *AuthorizationCodeOAuthFlow) Reset() {
 	*x = AuthorizationCodeOAuthFlow{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[26]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2436,7 +2480,7 @@ func (x *AuthorizationCodeOAuthFlow) String() string {
 func (*AuthorizationCodeOAuthFlow) ProtoMessage() {}
 
 func (x *AuthorizationCodeOAuthFlow) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[26]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2449,7 +2493,7 @@ func (x *AuthorizationCodeOAuthFlow) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AuthorizationCodeOAuthFlow.ProtoReflect.Descriptor instead.
 func (*AuthorizationCodeOAuthFlow) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{26}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *AuthorizationCodeOAuthFlow) GetAuthorizationUrl() string {
@@ -2502,7 +2546,7 @@ type ClientCredentialsOAuthFlow struct {
 
 func (x *ClientCredentialsOAuthFlow) Reset() {
 	*x = ClientCredentialsOAuthFlow{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[27]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2514,7 +2558,7 @@ func (x *ClientCredentialsOAuthFlow) String() string {
 func (*ClientCredentialsOAuthFlow) ProtoMessage() {}
 
 func (x *ClientCredentialsOAuthFlow) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[27]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2527,7 +2571,7 @@ func (x *ClientCredentialsOAuthFlow) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ClientCredentialsOAuthFlow.ProtoReflect.Descriptor instead.
 func (*ClientCredentialsOAuthFlow) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{27}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *ClientCredentialsOAuthFlow) GetTokenUrl() string {
@@ -2569,7 +2613,7 @@ type ImplicitOAuthFlow struct {
 
 func (x *ImplicitOAuthFlow) Reset() {
 	*x = ImplicitOAuthFlow{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[28]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2581,7 +2625,7 @@ func (x *ImplicitOAuthFlow) String() string {
 func (*ImplicitOAuthFlow) ProtoMessage() {}
 
 func (x *ImplicitOAuthFlow) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[28]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2594,7 +2638,7 @@ func (x *ImplicitOAuthFlow) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ImplicitOAuthFlow.ProtoReflect.Descriptor instead.
 func (*ImplicitOAuthFlow) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{28}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *ImplicitOAuthFlow) GetAuthorizationUrl() string {
@@ -2636,7 +2680,7 @@ type PasswordOAuthFlow struct {
 
 func (x *PasswordOAuthFlow) Reset() {
 	*x = PasswordOAuthFlow{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[29]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2648,7 +2692,7 @@ func (x *PasswordOAuthFlow) String() string {
 func (*PasswordOAuthFlow) ProtoMessage() {}
 
 func (x *PasswordOAuthFlow) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[29]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2661,7 +2705,7 @@ func (x *PasswordOAuthFlow) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PasswordOAuthFlow.ProtoReflect.Descriptor instead.
 func (*PasswordOAuthFlow) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{29}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *PasswordOAuthFlow) GetTokenUrl() string {
@@ -2704,7 +2748,7 @@ type DeviceCodeOAuthFlow struct {
 
 func (x *DeviceCodeOAuthFlow) Reset() {
 	*x = DeviceCodeOAuthFlow{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[30]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2716,7 +2760,7 @@ func (x *DeviceCodeOAuthFlow) String() string {
 func (*DeviceCodeOAuthFlow) ProtoMessage() {}
 
 func (x *DeviceCodeOAuthFlow) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[30]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2729,7 +2773,7 @@ func (x *DeviceCodeOAuthFlow) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeviceCodeOAuthFlow.ProtoReflect.Descriptor instead.
 func (*DeviceCodeOAuthFlow) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{30}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *DeviceCodeOAuthFlow) GetDeviceAuthorizationUrl() string {
@@ -2777,7 +2821,7 @@ type SendMessageRequest struct {
 
 func (x *SendMessageRequest) Reset() {
 	*x = SendMessageRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[31]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[32]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2789,7 +2833,7 @@ func (x *SendMessageRequest) String() string {
 func (*SendMessageRequest) ProtoMessage() {}
 
 func (x *SendMessageRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[31]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[32]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2802,7 +2846,7 @@ func (x *SendMessageRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMessageRequest.ProtoReflect.Descriptor instead.
 func (*SendMessageRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{31}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *SendMessageRequest) GetTenant() string {
@@ -2851,7 +2895,7 @@ type GetTaskRequest struct {
 
 func (x *GetTaskRequest) Reset() {
 	*x = GetTaskRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[32]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[33]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2863,7 +2907,7 @@ func (x *GetTaskRequest) String() string {
 func (*GetTaskRequest) ProtoMessage() {}
 
 func (x *GetTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[32]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[33]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2876,7 +2920,7 @@ func (x *GetTaskRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTaskRequest.ProtoReflect.Descriptor instead.
 func (*GetTaskRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{32}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *GetTaskRequest) GetTenant() string {
@@ -2933,7 +2977,7 @@ type ListTasksRequest struct {
 
 func (x *ListTasksRequest) Reset() {
 	*x = ListTasksRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[33]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2945,7 +2989,7 @@ func (x *ListTasksRequest) String() string {
 func (*ListTasksRequest) ProtoMessage() {}
 
 func (x *ListTasksRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[33]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2958,7 +3002,7 @@ func (x *ListTasksRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListTasksRequest.ProtoReflect.Descriptor instead.
 func (*ListTasksRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{33}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *ListTasksRequest) GetTenant() string {
@@ -3036,7 +3080,7 @@ type ListTasksResponse struct {
 
 func (x *ListTasksResponse) Reset() {
 	*x = ListTasksResponse{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[34]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3048,7 +3092,7 @@ func (x *ListTasksResponse) String() string {
 func (*ListTasksResponse) ProtoMessage() {}
 
 func (x *ListTasksResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[34]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3061,7 +3105,7 @@ func (x *ListTasksResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListTasksResponse.ProtoReflect.Descriptor instead.
 func (*ListTasksResponse) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{34}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *ListTasksResponse) GetTasks() []*Task {
@@ -3107,7 +3151,7 @@ type CancelTaskRequest struct {
 
 func (x *CancelTaskRequest) Reset() {
 	*x = CancelTaskRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[35]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3119,7 +3163,7 @@ func (x *CancelTaskRequest) String() string {
 func (*CancelTaskRequest) ProtoMessage() {}
 
 func (x *CancelTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[35]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3132,7 +3176,7 @@ func (x *CancelTaskRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CancelTaskRequest.ProtoReflect.Descriptor instead.
 func (*CancelTaskRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{35}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{36}
 }
 
 func (x *CancelTaskRequest) GetTenant() string {
@@ -3171,7 +3215,7 @@ type GetTaskPushNotificationConfigRequest struct {
 
 func (x *GetTaskPushNotificationConfigRequest) Reset() {
 	*x = GetTaskPushNotificationConfigRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[36]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3183,7 +3227,7 @@ func (x *GetTaskPushNotificationConfigRequest) String() string {
 func (*GetTaskPushNotificationConfigRequest) ProtoMessage() {}
 
 func (x *GetTaskPushNotificationConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[36]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3196,7 +3240,7 @@ func (x *GetTaskPushNotificationConfigRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use GetTaskPushNotificationConfigRequest.ProtoReflect.Descriptor instead.
 func (*GetTaskPushNotificationConfigRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{36}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *GetTaskPushNotificationConfigRequest) GetTenant() string {
@@ -3235,7 +3279,7 @@ type DeleteTaskPushNotificationConfigRequest struct {
 
 func (x *DeleteTaskPushNotificationConfigRequest) Reset() {
 	*x = DeleteTaskPushNotificationConfigRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[37]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[38]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3247,7 +3291,7 @@ func (x *DeleteTaskPushNotificationConfigRequest) String() string {
 func (*DeleteTaskPushNotificationConfigRequest) ProtoMessage() {}
 
 func (x *DeleteTaskPushNotificationConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[37]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[38]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3260,7 +3304,7 @@ func (x *DeleteTaskPushNotificationConfigRequest) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use DeleteTaskPushNotificationConfigRequest.ProtoReflect.Descriptor instead.
 func (*DeleteTaskPushNotificationConfigRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{37}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{38}
 }
 
 func (x *DeleteTaskPushNotificationConfigRequest) GetTenant() string {
@@ -3297,7 +3341,7 @@ type SubscribeToTaskRequest struct {
 
 func (x *SubscribeToTaskRequest) Reset() {
 	*x = SubscribeToTaskRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[38]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3309,7 +3353,7 @@ func (x *SubscribeToTaskRequest) String() string {
 func (*SubscribeToTaskRequest) ProtoMessage() {}
 
 func (x *SubscribeToTaskRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[38]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3322,7 +3366,7 @@ func (x *SubscribeToTaskRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SubscribeToTaskRequest.ProtoReflect.Descriptor instead.
 func (*SubscribeToTaskRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{38}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *SubscribeToTaskRequest) GetTenant() string {
@@ -3357,7 +3401,7 @@ type ListTaskPushNotificationConfigsRequest struct {
 
 func (x *ListTaskPushNotificationConfigsRequest) Reset() {
 	*x = ListTaskPushNotificationConfigsRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[39]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3369,7 +3413,7 @@ func (x *ListTaskPushNotificationConfigsRequest) String() string {
 func (*ListTaskPushNotificationConfigsRequest) ProtoMessage() {}
 
 func (x *ListTaskPushNotificationConfigsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[39]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3382,7 +3426,7 @@ func (x *ListTaskPushNotificationConfigsRequest) ProtoReflect() protoreflect.Mes
 
 // Deprecated: Use ListTaskPushNotificationConfigsRequest.ProtoReflect.Descriptor instead.
 func (*ListTaskPushNotificationConfigsRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{39}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *ListTaskPushNotificationConfigsRequest) GetTenant() string {
@@ -3424,7 +3468,7 @@ type GetExtendedAgentCardRequest struct {
 
 func (x *GetExtendedAgentCardRequest) Reset() {
 	*x = GetExtendedAgentCardRequest{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[40]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3436,7 +3480,7 @@ func (x *GetExtendedAgentCardRequest) String() string {
 func (*GetExtendedAgentCardRequest) ProtoMessage() {}
 
 func (x *GetExtendedAgentCardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[40]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3449,7 +3493,7 @@ func (x *GetExtendedAgentCardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetExtendedAgentCardRequest.ProtoReflect.Descriptor instead.
 func (*GetExtendedAgentCardRequest) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{40}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *GetExtendedAgentCardRequest) GetTenant() string {
@@ -3475,7 +3519,7 @@ type SendMessageResponse struct {
 
 func (x *SendMessageResponse) Reset() {
 	*x = SendMessageResponse{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[41]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3487,7 +3531,7 @@ func (x *SendMessageResponse) String() string {
 func (*SendMessageResponse) ProtoMessage() {}
 
 func (x *SendMessageResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[41]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3500,7 +3544,7 @@ func (x *SendMessageResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendMessageResponse.ProtoReflect.Descriptor instead.
 func (*SendMessageResponse) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{41}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *SendMessageResponse) GetPayload() isSendMessageResponse_Payload {
@@ -3565,7 +3609,7 @@ type StreamResponse struct {
 
 func (x *StreamResponse) Reset() {
 	*x = StreamResponse{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[42]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3577,7 +3621,7 @@ func (x *StreamResponse) String() string {
 func (*StreamResponse) ProtoMessage() {}
 
 func (x *StreamResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[42]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3590,7 +3634,7 @@ func (x *StreamResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StreamResponse.ProtoReflect.Descriptor instead.
 func (*StreamResponse) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{42}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *StreamResponse) GetPayload() isStreamResponse_Payload {
@@ -3683,7 +3727,7 @@ type ListTaskPushNotificationConfigsResponse struct {
 
 func (x *ListTaskPushNotificationConfigsResponse) Reset() {
 	*x = ListTaskPushNotificationConfigsResponse{}
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[43]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[44]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -3695,7 +3739,7 @@ func (x *ListTaskPushNotificationConfigsResponse) String() string {
 func (*ListTaskPushNotificationConfigsResponse) ProtoMessage() {}
 
 func (x *ListTaskPushNotificationConfigsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[43]
+	mi := &file_lf_a2a_v1_a2a_proto_msgTypes[44]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3708,7 +3752,7 @@ func (x *ListTaskPushNotificationConfigsResponse) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use ListTaskPushNotificationConfigsResponse.ProtoReflect.Descriptor instead.
 func (*ListTaskPushNotificationConfigsResponse) Descriptor() ([]byte, []int) {
-	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{43}
+	return file_lf_a2a_v1_a2a_proto_rawDescGZIP(), []int{44}
 }
 
 func (x *ListTaskPushNotificationConfigsResponse) GetConfigs() []*TaskPushNotificationConfig {
@@ -3729,7 +3773,9 @@ var File_lf_a2a_v1_a2a_proto protoreflect.FileDescriptor
 
 const file_lf_a2a_v1_a2a_proto_rawDesc = "" +
 	"\n" +
-	"\x13lf/a2a/v1/a2a.proto\x12\tlf.a2a.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x93\x02\n" +
+	"\x13lf/a2a/v1/a2a.proto\x12\tlf.a2a.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto\",\n" +
+	"\x16MyTemporaryTestMessage\x12\x12\n" +
+	"\x04test\x18\x01 \x01(\tR\x04test\"\x93\x02\n" +
 	"\x18SendMessageConfiguration\x122\n" +
 	"\x15accepted_output_modes\x18\x01 \x03(\tR\x13acceptedOutputModes\x12h\n" +
 	"\x1dtask_push_notification_config\x18\x02 \x01(\v2%.lf.a2a.v1.TaskPushNotificationConfigR\x1ataskPushNotificationConfig\x12*\n" +
@@ -4066,153 +4112,154 @@ func file_lf_a2a_v1_a2a_proto_rawDescGZIP() []byte {
 }
 
 var file_lf_a2a_v1_a2a_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_lf_a2a_v1_a2a_proto_msgTypes = make([]protoimpl.MessageInfo, 51)
+var file_lf_a2a_v1_a2a_proto_msgTypes = make([]protoimpl.MessageInfo, 52)
 var file_lf_a2a_v1_a2a_proto_goTypes = []any{
 	(TaskState)(0),                                  // 0: lf.a2a.v1.TaskState
 	(Role)(0),                                       // 1: lf.a2a.v1.Role
-	(*SendMessageConfiguration)(nil),                // 2: lf.a2a.v1.SendMessageConfiguration
-	(*Task)(nil),                                    // 3: lf.a2a.v1.Task
-	(*TaskStatus)(nil),                              // 4: lf.a2a.v1.TaskStatus
-	(*Part)(nil),                                    // 5: lf.a2a.v1.Part
-	(*Message)(nil),                                 // 6: lf.a2a.v1.Message
-	(*Artifact)(nil),                                // 7: lf.a2a.v1.Artifact
-	(*TaskStatusUpdateEvent)(nil),                   // 8: lf.a2a.v1.TaskStatusUpdateEvent
-	(*TaskArtifactUpdateEvent)(nil),                 // 9: lf.a2a.v1.TaskArtifactUpdateEvent
-	(*AuthenticationInfo)(nil),                      // 10: lf.a2a.v1.AuthenticationInfo
-	(*AgentInterface)(nil),                          // 11: lf.a2a.v1.AgentInterface
-	(*AgentCard)(nil),                               // 12: lf.a2a.v1.AgentCard
-	(*AgentProvider)(nil),                           // 13: lf.a2a.v1.AgentProvider
-	(*AgentCapabilities)(nil),                       // 14: lf.a2a.v1.AgentCapabilities
-	(*AgentExtension)(nil),                          // 15: lf.a2a.v1.AgentExtension
-	(*AgentSkill)(nil),                              // 16: lf.a2a.v1.AgentSkill
-	(*AgentCardSignature)(nil),                      // 17: lf.a2a.v1.AgentCardSignature
-	(*TaskPushNotificationConfig)(nil),              // 18: lf.a2a.v1.TaskPushNotificationConfig
-	(*StringList)(nil),                              // 19: lf.a2a.v1.StringList
-	(*SecurityRequirement)(nil),                     // 20: lf.a2a.v1.SecurityRequirement
-	(*SecurityScheme)(nil),                          // 21: lf.a2a.v1.SecurityScheme
-	(*APIKeySecurityScheme)(nil),                    // 22: lf.a2a.v1.APIKeySecurityScheme
-	(*HTTPAuthSecurityScheme)(nil),                  // 23: lf.a2a.v1.HTTPAuthSecurityScheme
-	(*OAuth2SecurityScheme)(nil),                    // 24: lf.a2a.v1.OAuth2SecurityScheme
-	(*OpenIdConnectSecurityScheme)(nil),             // 25: lf.a2a.v1.OpenIdConnectSecurityScheme
-	(*MutualTlsSecurityScheme)(nil),                 // 26: lf.a2a.v1.MutualTlsSecurityScheme
-	(*OAuthFlows)(nil),                              // 27: lf.a2a.v1.OAuthFlows
-	(*AuthorizationCodeOAuthFlow)(nil),              // 28: lf.a2a.v1.AuthorizationCodeOAuthFlow
-	(*ClientCredentialsOAuthFlow)(nil),              // 29: lf.a2a.v1.ClientCredentialsOAuthFlow
-	(*ImplicitOAuthFlow)(nil),                       // 30: lf.a2a.v1.ImplicitOAuthFlow
-	(*PasswordOAuthFlow)(nil),                       // 31: lf.a2a.v1.PasswordOAuthFlow
-	(*DeviceCodeOAuthFlow)(nil),                     // 32: lf.a2a.v1.DeviceCodeOAuthFlow
-	(*SendMessageRequest)(nil),                      // 33: lf.a2a.v1.SendMessageRequest
-	(*GetTaskRequest)(nil),                          // 34: lf.a2a.v1.GetTaskRequest
-	(*ListTasksRequest)(nil),                        // 35: lf.a2a.v1.ListTasksRequest
-	(*ListTasksResponse)(nil),                       // 36: lf.a2a.v1.ListTasksResponse
-	(*CancelTaskRequest)(nil),                       // 37: lf.a2a.v1.CancelTaskRequest
-	(*GetTaskPushNotificationConfigRequest)(nil),    // 38: lf.a2a.v1.GetTaskPushNotificationConfigRequest
-	(*DeleteTaskPushNotificationConfigRequest)(nil), // 39: lf.a2a.v1.DeleteTaskPushNotificationConfigRequest
-	(*SubscribeToTaskRequest)(nil),                  // 40: lf.a2a.v1.SubscribeToTaskRequest
-	(*ListTaskPushNotificationConfigsRequest)(nil),  // 41: lf.a2a.v1.ListTaskPushNotificationConfigsRequest
-	(*GetExtendedAgentCardRequest)(nil),             // 42: lf.a2a.v1.GetExtendedAgentCardRequest
-	(*SendMessageResponse)(nil),                     // 43: lf.a2a.v1.SendMessageResponse
-	(*StreamResponse)(nil),                          // 44: lf.a2a.v1.StreamResponse
-	(*ListTaskPushNotificationConfigsResponse)(nil), // 45: lf.a2a.v1.ListTaskPushNotificationConfigsResponse
-	nil,                           // 46: lf.a2a.v1.AgentCard.SecuritySchemesEntry
-	nil,                           // 47: lf.a2a.v1.SecurityRequirement.SchemesEntry
-	nil,                           // 48: lf.a2a.v1.AuthorizationCodeOAuthFlow.ScopesEntry
-	nil,                           // 49: lf.a2a.v1.ClientCredentialsOAuthFlow.ScopesEntry
-	nil,                           // 50: lf.a2a.v1.ImplicitOAuthFlow.ScopesEntry
-	nil,                           // 51: lf.a2a.v1.PasswordOAuthFlow.ScopesEntry
-	nil,                           // 52: lf.a2a.v1.DeviceCodeOAuthFlow.ScopesEntry
-	(*structpb.Struct)(nil),       // 53: google.protobuf.Struct
-	(*timestamppb.Timestamp)(nil), // 54: google.protobuf.Timestamp
-	(*structpb.Value)(nil),        // 55: google.protobuf.Value
-	(*emptypb.Empty)(nil),         // 56: google.protobuf.Empty
+	(*MyTemporaryTestMessage)(nil),                  // 2: lf.a2a.v1.MyTemporaryTestMessage
+	(*SendMessageConfiguration)(nil),                // 3: lf.a2a.v1.SendMessageConfiguration
+	(*Task)(nil),                                    // 4: lf.a2a.v1.Task
+	(*TaskStatus)(nil),                              // 5: lf.a2a.v1.TaskStatus
+	(*Part)(nil),                                    // 6: lf.a2a.v1.Part
+	(*Message)(nil),                                 // 7: lf.a2a.v1.Message
+	(*Artifact)(nil),                                // 8: lf.a2a.v1.Artifact
+	(*TaskStatusUpdateEvent)(nil),                   // 9: lf.a2a.v1.TaskStatusUpdateEvent
+	(*TaskArtifactUpdateEvent)(nil),                 // 10: lf.a2a.v1.TaskArtifactUpdateEvent
+	(*AuthenticationInfo)(nil),                      // 11: lf.a2a.v1.AuthenticationInfo
+	(*AgentInterface)(nil),                          // 12: lf.a2a.v1.AgentInterface
+	(*AgentCard)(nil),                               // 13: lf.a2a.v1.AgentCard
+	(*AgentProvider)(nil),                           // 14: lf.a2a.v1.AgentProvider
+	(*AgentCapabilities)(nil),                       // 15: lf.a2a.v1.AgentCapabilities
+	(*AgentExtension)(nil),                          // 16: lf.a2a.v1.AgentExtension
+	(*AgentSkill)(nil),                              // 17: lf.a2a.v1.AgentSkill
+	(*AgentCardSignature)(nil),                      // 18: lf.a2a.v1.AgentCardSignature
+	(*TaskPushNotificationConfig)(nil),              // 19: lf.a2a.v1.TaskPushNotificationConfig
+	(*StringList)(nil),                              // 20: lf.a2a.v1.StringList
+	(*SecurityRequirement)(nil),                     // 21: lf.a2a.v1.SecurityRequirement
+	(*SecurityScheme)(nil),                          // 22: lf.a2a.v1.SecurityScheme
+	(*APIKeySecurityScheme)(nil),                    // 23: lf.a2a.v1.APIKeySecurityScheme
+	(*HTTPAuthSecurityScheme)(nil),                  // 24: lf.a2a.v1.HTTPAuthSecurityScheme
+	(*OAuth2SecurityScheme)(nil),                    // 25: lf.a2a.v1.OAuth2SecurityScheme
+	(*OpenIdConnectSecurityScheme)(nil),             // 26: lf.a2a.v1.OpenIdConnectSecurityScheme
+	(*MutualTlsSecurityScheme)(nil),                 // 27: lf.a2a.v1.MutualTlsSecurityScheme
+	(*OAuthFlows)(nil),                              // 28: lf.a2a.v1.OAuthFlows
+	(*AuthorizationCodeOAuthFlow)(nil),              // 29: lf.a2a.v1.AuthorizationCodeOAuthFlow
+	(*ClientCredentialsOAuthFlow)(nil),              // 30: lf.a2a.v1.ClientCredentialsOAuthFlow
+	(*ImplicitOAuthFlow)(nil),                       // 31: lf.a2a.v1.ImplicitOAuthFlow
+	(*PasswordOAuthFlow)(nil),                       // 32: lf.a2a.v1.PasswordOAuthFlow
+	(*DeviceCodeOAuthFlow)(nil),                     // 33: lf.a2a.v1.DeviceCodeOAuthFlow
+	(*SendMessageRequest)(nil),                      // 34: lf.a2a.v1.SendMessageRequest
+	(*GetTaskRequest)(nil),                          // 35: lf.a2a.v1.GetTaskRequest
+	(*ListTasksRequest)(nil),                        // 36: lf.a2a.v1.ListTasksRequest
+	(*ListTasksResponse)(nil),                       // 37: lf.a2a.v1.ListTasksResponse
+	(*CancelTaskRequest)(nil),                       // 38: lf.a2a.v1.CancelTaskRequest
+	(*GetTaskPushNotificationConfigRequest)(nil),    // 39: lf.a2a.v1.GetTaskPushNotificationConfigRequest
+	(*DeleteTaskPushNotificationConfigRequest)(nil), // 40: lf.a2a.v1.DeleteTaskPushNotificationConfigRequest
+	(*SubscribeToTaskRequest)(nil),                  // 41: lf.a2a.v1.SubscribeToTaskRequest
+	(*ListTaskPushNotificationConfigsRequest)(nil),  // 42: lf.a2a.v1.ListTaskPushNotificationConfigsRequest
+	(*GetExtendedAgentCardRequest)(nil),             // 43: lf.a2a.v1.GetExtendedAgentCardRequest
+	(*SendMessageResponse)(nil),                     // 44: lf.a2a.v1.SendMessageResponse
+	(*StreamResponse)(nil),                          // 45: lf.a2a.v1.StreamResponse
+	(*ListTaskPushNotificationConfigsResponse)(nil), // 46: lf.a2a.v1.ListTaskPushNotificationConfigsResponse
+	nil,                           // 47: lf.a2a.v1.AgentCard.SecuritySchemesEntry
+	nil,                           // 48: lf.a2a.v1.SecurityRequirement.SchemesEntry
+	nil,                           // 49: lf.a2a.v1.AuthorizationCodeOAuthFlow.ScopesEntry
+	nil,                           // 50: lf.a2a.v1.ClientCredentialsOAuthFlow.ScopesEntry
+	nil,                           // 51: lf.a2a.v1.ImplicitOAuthFlow.ScopesEntry
+	nil,                           // 52: lf.a2a.v1.PasswordOAuthFlow.ScopesEntry
+	nil,                           // 53: lf.a2a.v1.DeviceCodeOAuthFlow.ScopesEntry
+	(*structpb.Struct)(nil),       // 54: google.protobuf.Struct
+	(*timestamppb.Timestamp)(nil), // 55: google.protobuf.Timestamp
+	(*structpb.Value)(nil),        // 56: google.protobuf.Value
+	(*emptypb.Empty)(nil),         // 57: google.protobuf.Empty
 }
 var file_lf_a2a_v1_a2a_proto_depIdxs = []int32{
-	18, // 0: lf.a2a.v1.SendMessageConfiguration.task_push_notification_config:type_name -> lf.a2a.v1.TaskPushNotificationConfig
-	4,  // 1: lf.a2a.v1.Task.status:type_name -> lf.a2a.v1.TaskStatus
-	7,  // 2: lf.a2a.v1.Task.artifacts:type_name -> lf.a2a.v1.Artifact
-	6,  // 3: lf.a2a.v1.Task.history:type_name -> lf.a2a.v1.Message
-	53, // 4: lf.a2a.v1.Task.metadata:type_name -> google.protobuf.Struct
+	19, // 0: lf.a2a.v1.SendMessageConfiguration.task_push_notification_config:type_name -> lf.a2a.v1.TaskPushNotificationConfig
+	5,  // 1: lf.a2a.v1.Task.status:type_name -> lf.a2a.v1.TaskStatus
+	8,  // 2: lf.a2a.v1.Task.artifacts:type_name -> lf.a2a.v1.Artifact
+	7,  // 3: lf.a2a.v1.Task.history:type_name -> lf.a2a.v1.Message
+	54, // 4: lf.a2a.v1.Task.metadata:type_name -> google.protobuf.Struct
 	0,  // 5: lf.a2a.v1.TaskStatus.state:type_name -> lf.a2a.v1.TaskState
-	6,  // 6: lf.a2a.v1.TaskStatus.message:type_name -> lf.a2a.v1.Message
-	54, // 7: lf.a2a.v1.TaskStatus.timestamp:type_name -> google.protobuf.Timestamp
-	55, // 8: lf.a2a.v1.Part.data:type_name -> google.protobuf.Value
-	53, // 9: lf.a2a.v1.Part.metadata:type_name -> google.protobuf.Struct
+	7,  // 6: lf.a2a.v1.TaskStatus.message:type_name -> lf.a2a.v1.Message
+	55, // 7: lf.a2a.v1.TaskStatus.timestamp:type_name -> google.protobuf.Timestamp
+	56, // 8: lf.a2a.v1.Part.data:type_name -> google.protobuf.Value
+	54, // 9: lf.a2a.v1.Part.metadata:type_name -> google.protobuf.Struct
 	1,  // 10: lf.a2a.v1.Message.role:type_name -> lf.a2a.v1.Role
-	5,  // 11: lf.a2a.v1.Message.parts:type_name -> lf.a2a.v1.Part
-	53, // 12: lf.a2a.v1.Message.metadata:type_name -> google.protobuf.Struct
-	5,  // 13: lf.a2a.v1.Artifact.parts:type_name -> lf.a2a.v1.Part
-	53, // 14: lf.a2a.v1.Artifact.metadata:type_name -> google.protobuf.Struct
-	4,  // 15: lf.a2a.v1.TaskStatusUpdateEvent.status:type_name -> lf.a2a.v1.TaskStatus
-	53, // 16: lf.a2a.v1.TaskStatusUpdateEvent.metadata:type_name -> google.protobuf.Struct
-	7,  // 17: lf.a2a.v1.TaskArtifactUpdateEvent.artifact:type_name -> lf.a2a.v1.Artifact
-	53, // 18: lf.a2a.v1.TaskArtifactUpdateEvent.metadata:type_name -> google.protobuf.Struct
-	11, // 19: lf.a2a.v1.AgentCard.supported_interfaces:type_name -> lf.a2a.v1.AgentInterface
-	13, // 20: lf.a2a.v1.AgentCard.provider:type_name -> lf.a2a.v1.AgentProvider
-	14, // 21: lf.a2a.v1.AgentCard.capabilities:type_name -> lf.a2a.v1.AgentCapabilities
-	46, // 22: lf.a2a.v1.AgentCard.security_schemes:type_name -> lf.a2a.v1.AgentCard.SecuritySchemesEntry
-	20, // 23: lf.a2a.v1.AgentCard.security_requirements:type_name -> lf.a2a.v1.SecurityRequirement
-	16, // 24: lf.a2a.v1.AgentCard.skills:type_name -> lf.a2a.v1.AgentSkill
-	17, // 25: lf.a2a.v1.AgentCard.signatures:type_name -> lf.a2a.v1.AgentCardSignature
-	15, // 26: lf.a2a.v1.AgentCapabilities.extensions:type_name -> lf.a2a.v1.AgentExtension
-	53, // 27: lf.a2a.v1.AgentExtension.params:type_name -> google.protobuf.Struct
-	20, // 28: lf.a2a.v1.AgentSkill.security_requirements:type_name -> lf.a2a.v1.SecurityRequirement
-	53, // 29: lf.a2a.v1.AgentCardSignature.header:type_name -> google.protobuf.Struct
-	10, // 30: lf.a2a.v1.TaskPushNotificationConfig.authentication:type_name -> lf.a2a.v1.AuthenticationInfo
-	47, // 31: lf.a2a.v1.SecurityRequirement.schemes:type_name -> lf.a2a.v1.SecurityRequirement.SchemesEntry
-	22, // 32: lf.a2a.v1.SecurityScheme.api_key_security_scheme:type_name -> lf.a2a.v1.APIKeySecurityScheme
-	23, // 33: lf.a2a.v1.SecurityScheme.http_auth_security_scheme:type_name -> lf.a2a.v1.HTTPAuthSecurityScheme
-	24, // 34: lf.a2a.v1.SecurityScheme.oauth2_security_scheme:type_name -> lf.a2a.v1.OAuth2SecurityScheme
-	25, // 35: lf.a2a.v1.SecurityScheme.open_id_connect_security_scheme:type_name -> lf.a2a.v1.OpenIdConnectSecurityScheme
-	26, // 36: lf.a2a.v1.SecurityScheme.mtls_security_scheme:type_name -> lf.a2a.v1.MutualTlsSecurityScheme
-	27, // 37: lf.a2a.v1.OAuth2SecurityScheme.flows:type_name -> lf.a2a.v1.OAuthFlows
-	28, // 38: lf.a2a.v1.OAuthFlows.authorization_code:type_name -> lf.a2a.v1.AuthorizationCodeOAuthFlow
-	29, // 39: lf.a2a.v1.OAuthFlows.client_credentials:type_name -> lf.a2a.v1.ClientCredentialsOAuthFlow
-	30, // 40: lf.a2a.v1.OAuthFlows.implicit:type_name -> lf.a2a.v1.ImplicitOAuthFlow
-	31, // 41: lf.a2a.v1.OAuthFlows.password:type_name -> lf.a2a.v1.PasswordOAuthFlow
-	32, // 42: lf.a2a.v1.OAuthFlows.device_code:type_name -> lf.a2a.v1.DeviceCodeOAuthFlow
-	48, // 43: lf.a2a.v1.AuthorizationCodeOAuthFlow.scopes:type_name -> lf.a2a.v1.AuthorizationCodeOAuthFlow.ScopesEntry
-	49, // 44: lf.a2a.v1.ClientCredentialsOAuthFlow.scopes:type_name -> lf.a2a.v1.ClientCredentialsOAuthFlow.ScopesEntry
-	50, // 45: lf.a2a.v1.ImplicitOAuthFlow.scopes:type_name -> lf.a2a.v1.ImplicitOAuthFlow.ScopesEntry
-	51, // 46: lf.a2a.v1.PasswordOAuthFlow.scopes:type_name -> lf.a2a.v1.PasswordOAuthFlow.ScopesEntry
-	52, // 47: lf.a2a.v1.DeviceCodeOAuthFlow.scopes:type_name -> lf.a2a.v1.DeviceCodeOAuthFlow.ScopesEntry
-	6,  // 48: lf.a2a.v1.SendMessageRequest.message:type_name -> lf.a2a.v1.Message
-	2,  // 49: lf.a2a.v1.SendMessageRequest.configuration:type_name -> lf.a2a.v1.SendMessageConfiguration
-	53, // 50: lf.a2a.v1.SendMessageRequest.metadata:type_name -> google.protobuf.Struct
+	6,  // 11: lf.a2a.v1.Message.parts:type_name -> lf.a2a.v1.Part
+	54, // 12: lf.a2a.v1.Message.metadata:type_name -> google.protobuf.Struct
+	6,  // 13: lf.a2a.v1.Artifact.parts:type_name -> lf.a2a.v1.Part
+	54, // 14: lf.a2a.v1.Artifact.metadata:type_name -> google.protobuf.Struct
+	5,  // 15: lf.a2a.v1.TaskStatusUpdateEvent.status:type_name -> lf.a2a.v1.TaskStatus
+	54, // 16: lf.a2a.v1.TaskStatusUpdateEvent.metadata:type_name -> google.protobuf.Struct
+	8,  // 17: lf.a2a.v1.TaskArtifactUpdateEvent.artifact:type_name -> lf.a2a.v1.Artifact
+	54, // 18: lf.a2a.v1.TaskArtifactUpdateEvent.metadata:type_name -> google.protobuf.Struct
+	12, // 19: lf.a2a.v1.AgentCard.supported_interfaces:type_name -> lf.a2a.v1.AgentInterface
+	14, // 20: lf.a2a.v1.AgentCard.provider:type_name -> lf.a2a.v1.AgentProvider
+	15, // 21: lf.a2a.v1.AgentCard.capabilities:type_name -> lf.a2a.v1.AgentCapabilities
+	47, // 22: lf.a2a.v1.AgentCard.security_schemes:type_name -> lf.a2a.v1.AgentCard.SecuritySchemesEntry
+	21, // 23: lf.a2a.v1.AgentCard.security_requirements:type_name -> lf.a2a.v1.SecurityRequirement
+	17, // 24: lf.a2a.v1.AgentCard.skills:type_name -> lf.a2a.v1.AgentSkill
+	18, // 25: lf.a2a.v1.AgentCard.signatures:type_name -> lf.a2a.v1.AgentCardSignature
+	16, // 26: lf.a2a.v1.AgentCapabilities.extensions:type_name -> lf.a2a.v1.AgentExtension
+	54, // 27: lf.a2a.v1.AgentExtension.params:type_name -> google.protobuf.Struct
+	21, // 28: lf.a2a.v1.AgentSkill.security_requirements:type_name -> lf.a2a.v1.SecurityRequirement
+	54, // 29: lf.a2a.v1.AgentCardSignature.header:type_name -> google.protobuf.Struct
+	11, // 30: lf.a2a.v1.TaskPushNotificationConfig.authentication:type_name -> lf.a2a.v1.AuthenticationInfo
+	48, // 31: lf.a2a.v1.SecurityRequirement.schemes:type_name -> lf.a2a.v1.SecurityRequirement.SchemesEntry
+	23, // 32: lf.a2a.v1.SecurityScheme.api_key_security_scheme:type_name -> lf.a2a.v1.APIKeySecurityScheme
+	24, // 33: lf.a2a.v1.SecurityScheme.http_auth_security_scheme:type_name -> lf.a2a.v1.HTTPAuthSecurityScheme
+	25, // 34: lf.a2a.v1.SecurityScheme.oauth2_security_scheme:type_name -> lf.a2a.v1.OAuth2SecurityScheme
+	26, // 35: lf.a2a.v1.SecurityScheme.open_id_connect_security_scheme:type_name -> lf.a2a.v1.OpenIdConnectSecurityScheme
+	27, // 36: lf.a2a.v1.SecurityScheme.mtls_security_scheme:type_name -> lf.a2a.v1.MutualTlsSecurityScheme
+	28, // 37: lf.a2a.v1.OAuth2SecurityScheme.flows:type_name -> lf.a2a.v1.OAuthFlows
+	29, // 38: lf.a2a.v1.OAuthFlows.authorization_code:type_name -> lf.a2a.v1.AuthorizationCodeOAuthFlow
+	30, // 39: lf.a2a.v1.OAuthFlows.client_credentials:type_name -> lf.a2a.v1.ClientCredentialsOAuthFlow
+	31, // 40: lf.a2a.v1.OAuthFlows.implicit:type_name -> lf.a2a.v1.ImplicitOAuthFlow
+	32, // 41: lf.a2a.v1.OAuthFlows.password:type_name -> lf.a2a.v1.PasswordOAuthFlow
+	33, // 42: lf.a2a.v1.OAuthFlows.device_code:type_name -> lf.a2a.v1.DeviceCodeOAuthFlow
+	49, // 43: lf.a2a.v1.AuthorizationCodeOAuthFlow.scopes:type_name -> lf.a2a.v1.AuthorizationCodeOAuthFlow.ScopesEntry
+	50, // 44: lf.a2a.v1.ClientCredentialsOAuthFlow.scopes:type_name -> lf.a2a.v1.ClientCredentialsOAuthFlow.ScopesEntry
+	51, // 45: lf.a2a.v1.ImplicitOAuthFlow.scopes:type_name -> lf.a2a.v1.ImplicitOAuthFlow.ScopesEntry
+	52, // 46: lf.a2a.v1.PasswordOAuthFlow.scopes:type_name -> lf.a2a.v1.PasswordOAuthFlow.ScopesEntry
+	53, // 47: lf.a2a.v1.DeviceCodeOAuthFlow.scopes:type_name -> lf.a2a.v1.DeviceCodeOAuthFlow.ScopesEntry
+	7,  // 48: lf.a2a.v1.SendMessageRequest.message:type_name -> lf.a2a.v1.Message
+	3,  // 49: lf.a2a.v1.SendMessageRequest.configuration:type_name -> lf.a2a.v1.SendMessageConfiguration
+	54, // 50: lf.a2a.v1.SendMessageRequest.metadata:type_name -> google.protobuf.Struct
 	0,  // 51: lf.a2a.v1.ListTasksRequest.status:type_name -> lf.a2a.v1.TaskState
-	54, // 52: lf.a2a.v1.ListTasksRequest.status_timestamp_after:type_name -> google.protobuf.Timestamp
-	3,  // 53: lf.a2a.v1.ListTasksResponse.tasks:type_name -> lf.a2a.v1.Task
-	53, // 54: lf.a2a.v1.CancelTaskRequest.metadata:type_name -> google.protobuf.Struct
-	3,  // 55: lf.a2a.v1.SendMessageResponse.task:type_name -> lf.a2a.v1.Task
-	6,  // 56: lf.a2a.v1.SendMessageResponse.message:type_name -> lf.a2a.v1.Message
-	3,  // 57: lf.a2a.v1.StreamResponse.task:type_name -> lf.a2a.v1.Task
-	6,  // 58: lf.a2a.v1.StreamResponse.message:type_name -> lf.a2a.v1.Message
-	8,  // 59: lf.a2a.v1.StreamResponse.status_update:type_name -> lf.a2a.v1.TaskStatusUpdateEvent
-	9,  // 60: lf.a2a.v1.StreamResponse.artifact_update:type_name -> lf.a2a.v1.TaskArtifactUpdateEvent
-	18, // 61: lf.a2a.v1.ListTaskPushNotificationConfigsResponse.configs:type_name -> lf.a2a.v1.TaskPushNotificationConfig
-	21, // 62: lf.a2a.v1.AgentCard.SecuritySchemesEntry.value:type_name -> lf.a2a.v1.SecurityScheme
-	19, // 63: lf.a2a.v1.SecurityRequirement.SchemesEntry.value:type_name -> lf.a2a.v1.StringList
-	33, // 64: lf.a2a.v1.A2AService.SendMessage:input_type -> lf.a2a.v1.SendMessageRequest
-	33, // 65: lf.a2a.v1.A2AService.SendStreamingMessage:input_type -> lf.a2a.v1.SendMessageRequest
-	34, // 66: lf.a2a.v1.A2AService.GetTask:input_type -> lf.a2a.v1.GetTaskRequest
-	35, // 67: lf.a2a.v1.A2AService.ListTasks:input_type -> lf.a2a.v1.ListTasksRequest
-	37, // 68: lf.a2a.v1.A2AService.CancelTask:input_type -> lf.a2a.v1.CancelTaskRequest
-	40, // 69: lf.a2a.v1.A2AService.SubscribeToTask:input_type -> lf.a2a.v1.SubscribeToTaskRequest
-	18, // 70: lf.a2a.v1.A2AService.CreateTaskPushNotificationConfig:input_type -> lf.a2a.v1.TaskPushNotificationConfig
-	38, // 71: lf.a2a.v1.A2AService.GetTaskPushNotificationConfig:input_type -> lf.a2a.v1.GetTaskPushNotificationConfigRequest
-	41, // 72: lf.a2a.v1.A2AService.ListTaskPushNotificationConfigs:input_type -> lf.a2a.v1.ListTaskPushNotificationConfigsRequest
-	42, // 73: lf.a2a.v1.A2AService.GetExtendedAgentCard:input_type -> lf.a2a.v1.GetExtendedAgentCardRequest
-	39, // 74: lf.a2a.v1.A2AService.DeleteTaskPushNotificationConfig:input_type -> lf.a2a.v1.DeleteTaskPushNotificationConfigRequest
-	43, // 75: lf.a2a.v1.A2AService.SendMessage:output_type -> lf.a2a.v1.SendMessageResponse
-	44, // 76: lf.a2a.v1.A2AService.SendStreamingMessage:output_type -> lf.a2a.v1.StreamResponse
-	3,  // 77: lf.a2a.v1.A2AService.GetTask:output_type -> lf.a2a.v1.Task
-	36, // 78: lf.a2a.v1.A2AService.ListTasks:output_type -> lf.a2a.v1.ListTasksResponse
-	3,  // 79: lf.a2a.v1.A2AService.CancelTask:output_type -> lf.a2a.v1.Task
-	44, // 80: lf.a2a.v1.A2AService.SubscribeToTask:output_type -> lf.a2a.v1.StreamResponse
-	18, // 81: lf.a2a.v1.A2AService.CreateTaskPushNotificationConfig:output_type -> lf.a2a.v1.TaskPushNotificationConfig
-	18, // 82: lf.a2a.v1.A2AService.GetTaskPushNotificationConfig:output_type -> lf.a2a.v1.TaskPushNotificationConfig
-	45, // 83: lf.a2a.v1.A2AService.ListTaskPushNotificationConfigs:output_type -> lf.a2a.v1.ListTaskPushNotificationConfigsResponse
-	12, // 84: lf.a2a.v1.A2AService.GetExtendedAgentCard:output_type -> lf.a2a.v1.AgentCard
-	56, // 85: lf.a2a.v1.A2AService.DeleteTaskPushNotificationConfig:output_type -> google.protobuf.Empty
+	55, // 52: lf.a2a.v1.ListTasksRequest.status_timestamp_after:type_name -> google.protobuf.Timestamp
+	4,  // 53: lf.a2a.v1.ListTasksResponse.tasks:type_name -> lf.a2a.v1.Task
+	54, // 54: lf.a2a.v1.CancelTaskRequest.metadata:type_name -> google.protobuf.Struct
+	4,  // 55: lf.a2a.v1.SendMessageResponse.task:type_name -> lf.a2a.v1.Task
+	7,  // 56: lf.a2a.v1.SendMessageResponse.message:type_name -> lf.a2a.v1.Message
+	4,  // 57: lf.a2a.v1.StreamResponse.task:type_name -> lf.a2a.v1.Task
+	7,  // 58: lf.a2a.v1.StreamResponse.message:type_name -> lf.a2a.v1.Message
+	9,  // 59: lf.a2a.v1.StreamResponse.status_update:type_name -> lf.a2a.v1.TaskStatusUpdateEvent
+	10, // 60: lf.a2a.v1.StreamResponse.artifact_update:type_name -> lf.a2a.v1.TaskArtifactUpdateEvent
+	19, // 61: lf.a2a.v1.ListTaskPushNotificationConfigsResponse.configs:type_name -> lf.a2a.v1.TaskPushNotificationConfig
+	22, // 62: lf.a2a.v1.AgentCard.SecuritySchemesEntry.value:type_name -> lf.a2a.v1.SecurityScheme
+	20, // 63: lf.a2a.v1.SecurityRequirement.SchemesEntry.value:type_name -> lf.a2a.v1.StringList
+	34, // 64: lf.a2a.v1.A2AService.SendMessage:input_type -> lf.a2a.v1.SendMessageRequest
+	34, // 65: lf.a2a.v1.A2AService.SendStreamingMessage:input_type -> lf.a2a.v1.SendMessageRequest
+	35, // 66: lf.a2a.v1.A2AService.GetTask:input_type -> lf.a2a.v1.GetTaskRequest
+	36, // 67: lf.a2a.v1.A2AService.ListTasks:input_type -> lf.a2a.v1.ListTasksRequest
+	38, // 68: lf.a2a.v1.A2AService.CancelTask:input_type -> lf.a2a.v1.CancelTaskRequest
+	41, // 69: lf.a2a.v1.A2AService.SubscribeToTask:input_type -> lf.a2a.v1.SubscribeToTaskRequest
+	19, // 70: lf.a2a.v1.A2AService.CreateTaskPushNotificationConfig:input_type -> lf.a2a.v1.TaskPushNotificationConfig
+	39, // 71: lf.a2a.v1.A2AService.GetTaskPushNotificationConfig:input_type -> lf.a2a.v1.GetTaskPushNotificationConfigRequest
+	42, // 72: lf.a2a.v1.A2AService.ListTaskPushNotificationConfigs:input_type -> lf.a2a.v1.ListTaskPushNotificationConfigsRequest
+	43, // 73: lf.a2a.v1.A2AService.GetExtendedAgentCard:input_type -> lf.a2a.v1.GetExtendedAgentCardRequest
+	40, // 74: lf.a2a.v1.A2AService.DeleteTaskPushNotificationConfig:input_type -> lf.a2a.v1.DeleteTaskPushNotificationConfigRequest
+	44, // 75: lf.a2a.v1.A2AService.SendMessage:output_type -> lf.a2a.v1.SendMessageResponse
+	45, // 76: lf.a2a.v1.A2AService.SendStreamingMessage:output_type -> lf.a2a.v1.StreamResponse
+	4,  // 77: lf.a2a.v1.A2AService.GetTask:output_type -> lf.a2a.v1.Task
+	37, // 78: lf.a2a.v1.A2AService.ListTasks:output_type -> lf.a2a.v1.ListTasksResponse
+	4,  // 79: lf.a2a.v1.A2AService.CancelTask:output_type -> lf.a2a.v1.Task
+	45, // 80: lf.a2a.v1.A2AService.SubscribeToTask:output_type -> lf.a2a.v1.StreamResponse
+	19, // 81: lf.a2a.v1.A2AService.CreateTaskPushNotificationConfig:output_type -> lf.a2a.v1.TaskPushNotificationConfig
+	19, // 82: lf.a2a.v1.A2AService.GetTaskPushNotificationConfig:output_type -> lf.a2a.v1.TaskPushNotificationConfig
+	46, // 83: lf.a2a.v1.A2AService.ListTaskPushNotificationConfigs:output_type -> lf.a2a.v1.ListTaskPushNotificationConfigsResponse
+	13, // 84: lf.a2a.v1.A2AService.GetExtendedAgentCard:output_type -> lf.a2a.v1.AgentCard
+	57, // 85: lf.a2a.v1.A2AService.DeleteTaskPushNotificationConfig:output_type -> google.protobuf.Empty
 	75, // [75:86] is the sub-list for method output_type
 	64, // [64:75] is the sub-list for method input_type
 	64, // [64:64] is the sub-list for extension type_name
@@ -4225,36 +4272,36 @@ func file_lf_a2a_v1_a2a_proto_init() {
 	if File_lf_a2a_v1_a2a_proto != nil {
 		return
 	}
-	file_lf_a2a_v1_a2a_proto_msgTypes[0].OneofWrappers = []any{}
-	file_lf_a2a_v1_a2a_proto_msgTypes[3].OneofWrappers = []any{
+	file_lf_a2a_v1_a2a_proto_msgTypes[1].OneofWrappers = []any{}
+	file_lf_a2a_v1_a2a_proto_msgTypes[4].OneofWrappers = []any{
 		(*Part_Text)(nil),
 		(*Part_Raw)(nil),
 		(*Part_Url)(nil),
 		(*Part_Data)(nil),
 	}
-	file_lf_a2a_v1_a2a_proto_msgTypes[10].OneofWrappers = []any{}
-	file_lf_a2a_v1_a2a_proto_msgTypes[12].OneofWrappers = []any{}
-	file_lf_a2a_v1_a2a_proto_msgTypes[19].OneofWrappers = []any{
+	file_lf_a2a_v1_a2a_proto_msgTypes[11].OneofWrappers = []any{}
+	file_lf_a2a_v1_a2a_proto_msgTypes[13].OneofWrappers = []any{}
+	file_lf_a2a_v1_a2a_proto_msgTypes[20].OneofWrappers = []any{
 		(*SecurityScheme_ApiKeySecurityScheme)(nil),
 		(*SecurityScheme_HttpAuthSecurityScheme)(nil),
 		(*SecurityScheme_Oauth2SecurityScheme)(nil),
 		(*SecurityScheme_OpenIdConnectSecurityScheme)(nil),
 		(*SecurityScheme_MtlsSecurityScheme)(nil),
 	}
-	file_lf_a2a_v1_a2a_proto_msgTypes[25].OneofWrappers = []any{
+	file_lf_a2a_v1_a2a_proto_msgTypes[26].OneofWrappers = []any{
 		(*OAuthFlows_AuthorizationCode)(nil),
 		(*OAuthFlows_ClientCredentials)(nil),
 		(*OAuthFlows_Implicit)(nil),
 		(*OAuthFlows_Password)(nil),
 		(*OAuthFlows_DeviceCode)(nil),
 	}
-	file_lf_a2a_v1_a2a_proto_msgTypes[32].OneofWrappers = []any{}
 	file_lf_a2a_v1_a2a_proto_msgTypes[33].OneofWrappers = []any{}
-	file_lf_a2a_v1_a2a_proto_msgTypes[41].OneofWrappers = []any{
+	file_lf_a2a_v1_a2a_proto_msgTypes[34].OneofWrappers = []any{}
+	file_lf_a2a_v1_a2a_proto_msgTypes[42].OneofWrappers = []any{
 		(*SendMessageResponse_Task)(nil),
 		(*SendMessageResponse_Message)(nil),
 	}
-	file_lf_a2a_v1_a2a_proto_msgTypes[42].OneofWrappers = []any{
+	file_lf_a2a_v1_a2a_proto_msgTypes[43].OneofWrappers = []any{
 		(*StreamResponse_Task)(nil),
 		(*StreamResponse_Message)(nil),
 		(*StreamResponse_StatusUpdate)(nil),
@@ -4266,7 +4313,7 @@ func file_lf_a2a_v1_a2a_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_lf_a2a_v1_a2a_proto_rawDesc), len(file_lf_a2a_v1_a2a_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   51,
+			NumMessages:   52,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
